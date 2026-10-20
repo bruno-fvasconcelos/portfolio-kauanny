@@ -1,0 +1,127 @@
+/* Referência de 1881 × 902 px. A tabela usa os quatro PNGs originais. */
+.panini-listening {
+  container-type: inline-size;
+  color: #d9d9d9;
+  background: linear-gradient(rgb(22 26 29 / 60%), rgb(22 26 29 / 60%)),
+    url("assets/about-background.png") center / cover no-repeat;
+  font-family: "About Sans", "Poppins", sans-serif;
+}
+
+.panini-listening__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1881 / 902;
+}
+
+.panini-listening__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.panini-listening__title-main {
+  position: absolute;
+  left: 49.6%;
+  top: 8.1%;
+  transform: translateX(-50%);
+  color: #96271f;
+  font-size: 8.81cqw;
+  line-height: .765;
+  letter-spacing: -.101em;
+  font-kerning: none;
+}
+
+.panini-listening__title-script {
+  position: absolute;
+  left: 50%;
+  top: 19.3%;
+  transform: translateX(-50%);
+  font-family: "About Script", cursive;
+  font-size: 2.643cqw;
+  line-height: 1.375;
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+.panini-listening__description {
+  position: absolute;
+  left: 50%;
+  top: 33.55%;
+  width: 70%;
+  margin: 0;
+  transform: translateX(-50%);
+  font-size: 1.234cqw;
+  line-height: 1.392857;
+  letter-spacing: .013em;
+  text-align: center;
+  font-kerning: none;
+}
+
+.panini-listening__figure {
+  position: absolute;
+  left: 50%;
+  top: 46.45%;
+  width: 64.35%;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.panini-listening__scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.panini-listening__scroll:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+.panini-listening__table img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .panini-listening__canvas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    aspect-ratio: auto;
+    padding: 32px 7% 36px;
+  }
+
+  .panini-listening__title {
+    position: relative;
+    min-height: 32cqw;
+  }
+
+  .panini-listening__title-main {
+    top: 0;
+    font-size: 20cqw;
+  }
+
+  .panini-listening__title-script {
+    top: 15cqw;
+    font-size: 6.4cqw;
+  }
+
+  .panini-listening__description,
+  .panini-listening__figure {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+
+  .panini-listening__description {
+    font-size: clamp(16px, 4.1cqw, 22px);
+    line-height: 1.45;
+  }
+
+  .panini-listening__break {
+    display: none;
+  }
+
+  .panini-listening__table {
+    min-width: 1210px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Referência de 1875 × 896 px; imagens originais, sem edição. */
+.allp-channel {
+  container-type: inline-size;
+  color: #d9d9d9;
+  background: linear-gradient(rgb(22 26 29 / 60%), rgb(22 26 29 / 60%)),
+    url("assets/about-background.png") center / cover no-repeat;
+  font-family: "About Sans", "Poppins", sans-serif;
+}
+
+.allp-channel__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1875 / 896;
+  overflow: clip;
+}
+
+.allp-channel__title { margin: 0; font-weight: 400; }
+
+.allp-channel__title-main {
+  position: absolute;
+  left: 12.91%;
+  top: 5.35%;
+  color: #96271f;
+  font-size: 7.75cqw;
+  line-height: .77;
+  letter-spacing: -.101em;
+  font-kerning: none;
+}
+
+.allp-channel__title-script {
+  position: absolute;
+  left: 12.91%;
+  top: 17.1%;
+  font-family: "About Script", cursive;
+  font-size: 2.65cqw;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+.allp-channel__story {
+  position: absolute;
+  left: 12.91%;
+  top: 30.2%;
+  width: 34.2%;
+}
+
+.allp-channel__copy {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.2cqw;
+  line-height: 1.334;
+  letter-spacing: -.03em;
+  font-kerning: none;
+}
+
+.allp-channel__image { position: absolute; display: block; height: auto; }
+.allp-channel__image--schedule {
+  position: static;
+  width: 67.51%;
+  margin-top: 1.5cqw;
+  margin-left: 27.13%;
+}
+.allp-channel__image--numbers { left: 49.57%; top: 29.13%; width: 25.87%; }
+.allp-channel__image--rosh { left: 52.03%; top: 55.36%; width: 22.35%; }
+.allp-channel__club {
+  position: absolute;
+  left: 75.97%;
+  top: 19.31%;
+  width: 16.21%;
+  aspect-ratio: 304 / 596;
+  overflow: hidden;
+}
+.allp-channel__club img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 56%; }
+
+@media (max-width: 760px) {
+  .allp-channel__canvas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    aspect-ratio: auto;
+    padding: 36px 7% 48px;
+    gap: 30px;
+  }
+  .allp-channel__title { position: relative; min-height: 30cqw; }
+  .allp-channel__title-main { left: 0; top: 0; font-size: 20cqw; }
+  .allp-channel__title-script { left: 0; top: 15cqw; font-size: 4.5cqw; }
+  .allp-channel__story { position: static; width: auto; }
+  .allp-channel__copy { position: static; width: auto; white-space: normal; font-size: clamp(16px, 4.1cqw, 22px); line-height: 1.45; }
+  .allp-channel__break { display: none; }
+  .allp-channel__image, .allp-channel__club { position: static; width: 100%; }
+  .allp-channel__image--schedule { margin: 30px 0 0; }
+  .allp-channel__club { width: 80%; justify-self: center; }
+}

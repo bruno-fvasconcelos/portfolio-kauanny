@@ -1,0 +1,175 @@
+/* Case Allp Fit: referência de 1877 × 897 px e recortes originais. */
+.allp {
+  container-type: inline-size;
+  color: #d9d9d9;
+  background: linear-gradient(rgb(22 26 29 / 60%), rgb(22 26 29 / 60%)),
+    url("assets/about-background.png") center / cover no-repeat;
+  font-family: "About Sans", "Poppins", sans-serif;
+}
+
+.allp__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1877 / 897;
+  overflow: clip;
+}
+
+.allp__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.allp__title-main {
+  position: absolute;
+  left: 9.43%;
+  top: 3.5%;
+  color: #96271f;
+  font-size: 8.6cqw;
+  line-height: .77;
+  letter-spacing: -.101em;
+  font-kerning: none;
+}
+
+.allp__title-script {
+  position: absolute;
+  left: 9.43%;
+  top: 17.1%;
+  font-family: "About Script", cursive;
+  font-size: 2.685cqw;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+.allp__copy {
+  position: absolute;
+  left: 9.43%;
+  top: 27.9%;
+  width: 36.3%;
+  font-size: 1.2cqw;
+  line-height: 1.322;
+  letter-spacing: -.03em;
+  font-kerning: none;
+}
+
+.allp__copy p {
+  margin: 0;
+}
+
+.allp__copy .allp__result {
+  margin-top: 1.65cqw;
+}
+
+.allp__result strong {
+  color: #96271f;
+  font-weight: 700;
+}
+
+.allp__interaction {
+  position: absolute;
+  display: block;
+  border-radius: 1.4cqw;
+  overflow: hidden;
+  transform: translate(-50%, -50%) rotate(var(--angle, 0deg));
+}
+
+.allp__interaction img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.allp__interaction:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+.allp__interaction--curriculo {
+  left: 75.12%;
+  top: 18.4%;
+  width: 30.15%;
+  --angle: -11.36deg;
+}
+
+.allp__interaction--duolingo {
+  left: 81%;
+  top: 46.6%;
+  width: 16.05%;
+  --angle: 21.47deg;
+}
+
+.allp__interaction--guerreira {
+  left: 58.26%;
+  top: 56.52%;
+  width: 24.13%;
+}
+
+.allp__interaction--cinema {
+  left: 29.65%;
+  top: 77.66%;
+  width: 22.27%;
+}
+
+.allp__interaction--propaganda {
+  left: 78.5%;
+  top: 83.39%;
+  width: 20.2%;
+  border-radius: 0;
+  --angle: -16.7deg;
+}
+
+@media (max-width: 760px) {
+  .allp__canvas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    aspect-ratio: auto;
+    gap: 30px;
+    padding: 36px 7% 48px;
+  }
+
+  .allp__title {
+    position: relative;
+    min-height: 30cqw;
+  }
+
+  .allp__title-main {
+    left: 0;
+    top: 0;
+    font-size: 20cqw;
+  }
+
+  .allp__title-script {
+    left: 0;
+    top: 15cqw;
+    font-size: 4.5cqw;
+  }
+
+  .allp__copy {
+    position: static;
+    width: auto;
+    font-size: clamp(16px, 4.1cqw, 22px);
+    line-height: 1.45;
+  }
+
+  .allp__copy .allp__result {
+    margin-top: 24px;
+  }
+
+  .allp__break {
+    display: none;
+  }
+
+  .allp__interaction {
+    position: relative;
+    left: auto;
+    top: auto;
+    justify-self: center;
+    width: 92%;
+    margin: 10px 0;
+    transform: rotate(clamp(-5deg, var(--angle, 0deg), 5deg));
+  }
+
+  .allp__interaction--duolingo {
+    width: 80%;
+  }
+}

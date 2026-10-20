@@ -1,0 +1,68 @@
+/* Apenas o trecho contínuo do chiado original; sem entrada ou saída em preto. */
+.cases {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 1891 / 912;
+  overflow: clip;
+  background: #161a1d;
+}
+
+.cases__noise {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .34;
+  pointer-events: none;
+}
+
+.cases__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.cases__title-main {
+  position: absolute;
+  left: 49.6%;
+  top: 31.1%;
+  transform: translateX(-50%);
+  color: #96271f;
+  font-family: "About Sans", "Poppins", sans-serif;
+  font-size: 9.3cqw;
+  line-height: .765;
+  letter-spacing: -.09em;
+  font-kerning: none;
+}
+
+.cases__title-script {
+  position: absolute;
+  left: 50%;
+  top: 38.6%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: "About Script", cursive;
+  font-size: 7.05cqw;
+  line-height: 1.397;
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+@media (max-width: 760px) {
+  .cases {
+    aspect-ratio: 1 / 1;
+  }
+
+  .cases__title-main {
+    top: 32%;
+    font-size: 16cqw;
+  }
+
+  .cases__title-script {
+    top: 40%;
+    font-size: 11.8cqw;
+  }
+}

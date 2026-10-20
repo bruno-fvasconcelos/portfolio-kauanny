@@ -1,0 +1,191 @@
+/* Poppins escolhida pela usuária; servida localmente. */
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/poppins-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --title-color: #96271f;
+  --ink: #181d20;
+  --page-font: "Poppins", "Century Gothic", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: var(--page-font);
+  color: var(--ink);
+  background: #b1b4b7;
+}
+
+.cover {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 480px;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background: #a5a8ab;
+}
+
+.cover__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.cover__title {
+  position: absolute;
+  top: 51.8%;
+  left: 48.7%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  color: var(--title-color);
+  font-weight: 400;
+  font-size: 24.5vw;
+  line-height: 1;
+  letter-spacing: -.104em;
+  white-space: nowrap;
+}
+
+.cover__links {
+  position: absolute;
+  right: 10.1%;
+  bottom: max(3.1%, env(safe-area-inset-bottom));
+  left: 10.1%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  column-gap: 12px;
+}
+
+a {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 44px;
+  min-height: 44px;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.social-link--linkedin {
+  justify-self: start;
+}
+
+.social-link--email {
+  justify-self: end;
+}
+
+.social-link img {
+  display: block;
+  height: auto;
+}
+
+.linkedin-icon {
+  width: clamp(44px, 5.1vw, 108px);
+}
+
+.email-icon {
+  width: clamp(44px, 4.7vw, 100px);
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-bottom: .35vw;
+  font-size: clamp(16px, 1.6vw, 36px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.045em;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+  transition: text-decoration-color 160ms ease;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 7px;
+  border-radius: 3px;
+}
+
+@media (hover: hover) {
+  .social-link:hover {
+    opacity: .78;
+    transform: translateY(-2px);
+  }
+
+  .resume-link:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+@media (max-width: 600px) {
+  .cover {
+    min-height: 480px;
+  }
+
+  .cover__title {
+    top: 47%;
+    font-size: 25.2vw;
+  }
+
+  .cover__links {
+    left: 6%;
+    right: 6%;
+    bottom: max(28px, env(safe-area-inset-bottom));
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .resume-link {
+    margin-bottom: 0;
+    font-size: clamp(15px, 4vw, 21px);
+    letter-spacing: -.04em;
+  }
+
+  .linkedin-icon {
+    width: 48px;
+  }
+
+  .email-icon {
+    width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:not(.contact__button) {
+    transition: none !important;
+  }
+}
+
+

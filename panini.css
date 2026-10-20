@@ -1,0 +1,195 @@
+/* Case Panini: composição da referência de 1886 × 888 px. */
+.panini {
+  container-type: inline-size;
+  color: #d9d9d9;
+  background: linear-gradient(rgb(22 26 29 / 60%), rgb(22 26 29 / 60%)),
+    url("assets/about-background.png") center / cover no-repeat;
+  font-family: "About Sans", "Poppins", sans-serif;
+}
+
+.panini__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1886 / 888;
+  overflow: clip;
+}
+
+.panini__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.panini__title-main {
+  position: absolute;
+  left: 9.65%;
+  top: 15.4%;
+  color: #96271f;
+  font-size: 8.6cqw;
+  line-height: .768;
+  letter-spacing: -.101em;
+  font-kerning: none;
+}
+
+.panini__title-script {
+  position: absolute;
+  left: 9.65%;
+  top: 27.4%;
+  color: #d9d9d9;
+  font-family: "About Script", cursive;
+  font-size: 2.467cqw;
+  line-height: 1.397;
+  font-kerning: none;
+  white-space: nowrap;
+}
+
+.panini__copy {
+  position: absolute;
+  left: 9.65%;
+  top: 39%;
+  width: 33%;
+  font-size: 1.218cqw;
+  line-height: 1.3026;
+  letter-spacing: -.05em;
+  font-kerning: none;
+}
+
+.panini__copy p {
+  margin: 0;
+}
+
+.panini__copy .panini__result {
+  margin-top: 1.7cqw;
+}
+
+.panini__result strong {
+  color: #96271f;
+  font-weight: 700;
+}
+
+.panini__comment {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%) rotate(var(--angle));
+  border-radius: 1.4cqw;
+  overflow: hidden;
+}
+
+.panini__comment img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.panini__comment:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+.panini__comment--unboxing {
+  left: 48.62%;
+  top: 21.17%;
+  width: 20.96%;
+  --angle: 21.77deg;
+}
+
+.panini__comment--culpa {
+  left: 77.03%;
+  top: 18.98%;
+  width: 20.55%;
+  --angle: -3.894deg;
+}
+
+.panini__comment--figurinhas {
+  left: 77.57%;
+  top: 39.75%;
+  width: 19.96%;
+  --angle: -18.85deg;
+}
+
+.panini__comment--brecha {
+  left: 53.5%;
+  top: 49.27%;
+  width: 22.43%;
+  --angle: 0deg;
+}
+
+.panini__comment--aura {
+  left: 77.625%;
+  top: 63%;
+  width: 19.615%;
+  --angle: 4.439deg;
+}
+
+.panini__comment--moldura {
+  left: 23.38%;
+  top: 86.2%;
+  width: 19.572%;
+  --angle: 10.89deg;
+}
+
+.panini__comment--emocoes {
+  left: 52.17%;
+  top: 79.05%;
+  width: 21.27%;
+  --angle: 8.775deg;
+}
+
+.panini__comment--mini {
+  left: 72.6%;
+  top: 84.23%;
+  width: 17.494%;
+  --angle: -9.486deg;
+}
+
+@media (max-width: 760px) {
+  .panini__canvas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    aspect-ratio: auto;
+    padding: 36px 7% 54px;
+    gap: 30px;
+  }
+
+  .panini__title {
+    position: relative;
+    min-height: 32cqw;
+  }
+
+  .panini__title-main {
+    left: 0;
+    top: 0;
+    font-size: 20cqw;
+  }
+
+  .panini__title-script {
+    left: 0;
+    top: 15cqw;
+    font-size: 5.3cqw;
+  }
+
+  .panini__copy {
+    position: static;
+    width: auto;
+    font-size: clamp(16px, 4.1cqw, 22px);
+    line-height: 1.45;
+  }
+
+  .panini__copy .panini__result {
+    margin-top: 24px;
+  }
+
+  .panini__break {
+    display: none;
+  }
+
+  .panini__comment {
+    position: relative;
+    left: auto;
+    top: auto;
+    justify-self: center;
+    width: 92%;
+    margin: 10px 0;
+    border-radius: 14px;
+    transform: rotate(clamp(-6deg, var(--angle), 6deg));
+  }
+}

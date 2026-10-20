@@ -1,0 +1,162 @@
+/* Quarta seção: referência de 1880 × 852 px, com os arquivos originais. */
+.brands {
+  container-type: inline-size;
+  color: #d9d9d9;
+  background: linear-gradient(rgb(22 26 29 / 67%), rgb(22 26 29 / 67%)),
+    url("assets/brands-background.png") center / cover no-repeat;
+  font-family: "About Sans", "Poppins", sans-serif;
+}
+
+.brands__canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1880 / 852;
+  overflow: clip;
+}
+
+.brands__title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.brands__title-main {
+  position: absolute;
+  left: 26.8%;
+  top: 10%;
+  color: #96271f;
+  font-size: 9.4cqw;
+  line-height: .773;
+  letter-spacing: -.101em;
+  font-kerning: none;
+}
+
+.brands__title-script {
+  position: absolute;
+  left: 43.55%;
+  top: 20.5%;
+  font-family: "About Script", cursive;
+  font-size: 10.9cqw;
+  line-height: 1;
+  white-space: nowrap;
+  font-kerning: none;
+}
+
+/* A caixa do conjunto fica centralizada; os PNGs mantêm suas margens nativas. */
+.brands__logos {
+  position: absolute;
+  left: 50%;
+  top: 63.8%;
+  width: 76.72%;
+  height: 28.4%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateX(-50%);
+}
+
+.brands__logo {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.brands__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brands__logo--mcdonalds {
+  left: 0;
+  width: 9.92cqw;
+}
+
+.brands__logo--invisalign {
+  left: 16.57%;
+  width: 15.64cqw;
+}
+
+.brands__logo--panini {
+  left: 38.26%;
+  width: 19.59cqw;
+}
+
+.brands__logo--allp-fit {
+  left: 64.58%;
+  top: calc(50% - .62cqw);
+  width: 12.25cqw;
+}
+
+.brands__logo--smart-fit {
+  left: 85.58%;
+  top: calc(50% - 1.19cqw);
+  width: 11.07cqw;
+}
+
+@media (max-width: 760px) {
+  .brands__canvas {
+    aspect-ratio: auto;
+    padding: 32px 7% 40px;
+  }
+
+  .brands__title {
+    position: relative;
+    min-height: 68cqw;
+  }
+
+  .brands__title-main {
+    top: 0;
+    left: 5%;
+    font-size: 18cqw;
+  }
+
+  .brands__title-script {
+    top: 19cqw;
+    left: 20%;
+    font-size: 16cqw;
+  }
+
+  .brands__logos {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 22px 7%;
+    transform: none;
+  }
+
+  .brands__logo {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 43%;
+    width: auto;
+    min-height: 26cqw;
+    transform: none;
+  }
+
+  .brands__logo--mcdonalds img {
+    width: 25cqw;
+  }
+
+  .brands__logo--invisalign img {
+    width: 38cqw;
+  }
+
+  .brands__logo--panini img {
+    width: 43cqw;
+  }
+
+  .brands__logo--allp-fit img {
+    width: 32cqw;
+  }
+
+  .brands__logo--smart-fit img {
+    width: 29cqw;
+  }
+}
